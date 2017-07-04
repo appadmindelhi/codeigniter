@@ -15,10 +15,13 @@ class Adminuser extends CI_Controller{
 
         $data['users']=$this->user->getinguserlist();
 
-        //print_r($data);
-
         $this->load->view('listuser',$data);
 
+    }
+    public function edit(){
+	    
+	$this->load->view('edituser');
+	    
     }
 
 }
