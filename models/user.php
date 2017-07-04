@@ -10,16 +10,19 @@
 
          $this->load->database();
          $this->load->library("form_validation");
+         $this->load->helper('form');
         
-     }
-     
+    }
+
 	public function getinguserlist(){
 		
-		    $this->db->select("*");
-            $this->db->from("users");
-            $query = $this->db->get(); 
-		    return $sql->result();
-        
+		 $query = $this->db->get('users'); 
+
+		 $result=$query->result();
+		 
+         return $result;
+
+	        
 	}
 
 }
